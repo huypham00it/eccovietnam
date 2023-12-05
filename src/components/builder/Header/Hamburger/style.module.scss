@@ -1,0 +1,39 @@
+.wrapper {
+    &.active {
+        span {
+            &:first-child {
+                transform-origin: 17%;
+                transform: rotate(45deg);
+            }
+
+            &:last-child {
+                transform-origin: 17%;
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+    }
+
+    @apply tw-flex tw-flex-col tw-gap-1 hover:tw-cursor-pointer;
+
+    span {
+        @apply tw-transition-all tw-duration-200;
+
+        &:first-child,
+        &:last-child {
+            width: 25px;
+            height: 2px;
+        }
+
+        &:nth-child(2) {
+            height: 2px;
+
+            @apply tw-w-5;
+        }
+
+        @apply tw-inline-block tw-bg-gray-500;
+    }
+}

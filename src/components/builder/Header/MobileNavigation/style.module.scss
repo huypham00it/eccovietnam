@@ -1,0 +1,40 @@
+.wrapper {
+    border-top: 1px solid #e6e6e6;
+}
+
+.nav_item {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.plus_icon {
+    &.active {
+        span {
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+
+    @apply tw-relative tw-h-5;
+    span {
+        height: 2px;
+
+        &:first-child {
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            transform: translate(-50%, -50%) rotate(90deg);
+
+            @apply tw-absolute;
+        }
+
+        &:last-child {
+            margin: 9px 0;
+        }
+        @apply tw-w-5 tw-inline-block tw-bg-gray-500 tw-transition-all;
+    }
+}
+
+.menu.active {
+    max-height: 5000px;
+}

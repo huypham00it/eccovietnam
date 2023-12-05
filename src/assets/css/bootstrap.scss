@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$offcanvas-horizontal-width: 510px;
+$dropdown-min-width: 240px;
+@import "bootstrap/scss/bootstrap.scss";

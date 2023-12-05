@@ -1,0 +1,32 @@
+.nav_item_link {
+    &::after {
+        content: "";
+        height: 2px;
+        transition: all 0.3s linear;
+        @apply tw-absolute tw-bg-black tw-w-0 tw-top-full tw-left-0 tw-block;
+    }
+
+    @apply tw-relative;
+}
+
+.nav_item {
+    &:hover {
+        &::before {
+            content: "";
+            @apply tw-w-full tw-block tw-bg-transparent tw-bottom-0 tw-h-4 tw-absolute tw-left-0 tw-z-10;
+        }
+    }
+
+    &:hover {
+        .special_product {
+            max-height: 1000px;
+            @apply tw-pb-4;
+        }
+
+        .nav_item_link {
+            &::after {
+                @apply tw-w-full;
+            }
+        }
+    }
+}
