@@ -21,6 +21,7 @@ const CustomToggleAccount = React.forwardRef(
                 e.preventDefault();
                 onClick(e);
             }}
+            className="tw-flex tw-items-center"
         >
             {children}
         </span>
